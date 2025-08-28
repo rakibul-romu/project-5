@@ -7,18 +7,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="h-screen">
-    <div class="flex items-center justify-between bg-white ml-10 mr-10 mt-5 px-4 py-2 ">
+<body class="h-screen bg-[#DFEFFF]">
+    <div class="flex items-center justify-between bg-white ">
   
-        <div class="flex items-center space-x-2">
+        <div class="flex items-center space-x-2 ml-10 mt-5 mb-5">
             <img src="./assets/logo.png" alt="logo" class="w-10 h-10 " >
             <span class="text-green-700 font-bold text-lg leading-tight">Emergency <br> Service</span>
         </div>
 
-        <div class="flex items-center space-x-4">
+        <div class="flex items-center space-x-4 mr-10 mt-5 mb-5">
             <div class="flex items-center bg-green-50 px-4 py-1 gap-2 rounded-full">
-                <span class="text-sm font-medium">0</span>
-                <span class="h-5 w-5"><img src="./assets/heart.png"></span>
+                <span id="count" class="text-sm font-medium">0</span>
+                <span id="love" class="h-5 w-5"><img src="./assets/heart.png"></span>
             </div>
 
     
@@ -38,16 +38,16 @@
         <h1 class="text-4xl text-white text-center   ">Emergency Service Directory</h1>
         <p class="text-sm text-white text-center  pb-5 pt-3">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
     </main>
-    <section id="Service-Container" class="w-11/12 mx-auto py-10 grid grid-cols-12 gap-8 ">
-        <section id="Service-box" class="bg-green-500 col-span-9">
-            <div class="grid grid-cols-3 gap-3 p-5">
+    <section id="Service-Container" class="w-11/12 mx-auto py-10   grid grid-cols-12 gap-4 ">
+        <section id="Service-box" class=" col-span-9">
+            <div class="grid grid-cols-3 gap-6 ">
                 <div class="bg-white rounded-lg shadow-md p-4  ">
                     <div class="flex items-center justify-between">
                         <img src="./assets/emergency.png" alt="ambulance" class="w-6 h-6 mb-4">
-                        <i class="fa-regular fa-heart"></i>
+                        <i id="life" class="fa-regular fa-heart"></i>
                     </div>
                     <h1 class="text-[17px] font-bold  mx-w-full">National Emergency Number</h1>
-                    <p class="text-sm"> free serves</p>
+                    <p class="text-sm"> National Emergency Service</p>
                     <h1 class="text-lg font-bold mt-4">999</h1>
                     <span class="text-sm bg-gray-200 rounded-full px-3 py-1">All</span>
                     <div class="gap-3 mt-4">
@@ -63,7 +63,7 @@
                  <div class="bg-white rounded-lg shadow-md p-4  ">
                     <div class="flex items-center justify-between">
                         <img src="./assets/police.png" alt="ambulance" class="w-6 h-6 mb-4">
-                        <i class="fa-regular fa-heart"></i>
+                        <i id="life" class="fa-regular fa-heart"></i>
                     </div>
                     <h1 class="text-[17px] font-bold  mx-w-full">Police Helpline Number</h1>
                     <p class="text-sm"> Police</p>
@@ -80,13 +80,13 @@
 
                  <div class="bg-white rounded-lg shadow-md p-4  ">
                     <div class="flex items-center justify-between">
-                        <img src="./assets/emergency.png" alt="ambulance" class="w-8 h-8 mb-4">
-                        <i class="fa-regular fa-heart"></i>
+                        <img src="./assets/fire-service.png" alt="ambulance" class="w-6 h-6 mb-4">
+                        <i id="life" class="fa-regular fa-heart"></i>
                     </div>
-                    <h1 class="text-[17px] font-bold  mx-w-full">National Emergency Number</h1>
-                    <p class="text-sm"> free serves</p>
+                    <h1 class="text-[17px] font-bold  mx-w-full">Fire Service Number</h1>
+                    <p class="text-sm"> Fire Service</p>
                     <h1 class="text-lg font-bold mt-4">999</h1>
-                    <span class="text-sm bg-gray-200 rounded-full px-3 py-1">All</span>
+                    <span class="text-sm bg-gray-200 rounded-full px-3 py-1">Fire</span>
                     <div class="gap-3 mt-4">
                         <button class="border border-indigo-600 px-6 py-1 rounded-md"><i class="fa-regular fa-copy"></i> <span>Copy</span></button>
 
@@ -98,13 +98,13 @@
 
                  <div class="bg-white rounded-lg shadow-md p-4  ">
                     <div class="flex items-center justify-between">
-                        <img src="./assets/emergency.png" alt="ambulance" class="w-8 h-8 mb-4">
-                        <i class="fa-regular fa-heart"></i>
+                        <img src="./assets/ambulance.png" alt="ambulance" class="w-6 h-6 mb-4">
+                        <i id="life" class="fa-regular fa-heart"></i>
                     </div>
-                    <h1 class="text-[17px] font-bold  mx-w-full">National Emergency Number</h1>
-                    <p class="text-sm"> free serves</p>
-                    <h1 class="text-lg font-bold mt-4">999</h1>
-                    <span class="text-sm bg-gray-200 rounded-full px-3 py-1">All</span>
+                    <h1 class="text-[17px] font-bold  mx-w-full">Ambulance Service</h1>
+                    <p class="text-sm"> Ambulance</p>
+                    <h1 class="text-lg font-bold mt-4">1994-999999</h1>
+                    <span class="text-sm bg-gray-200 rounded-full px-3 py-1">Health</span>
                     <div class="gap-3 mt-4">
                         <button class="border border-indigo-600 px-6 py-1 rounded-md"><i class="fa-regular fa-copy"></i> <span>Copy</span></button>
 
@@ -116,13 +116,13 @@
 
                  <div class="bg-white rounded-lg shadow-md p-4  ">
                     <div class="flex items-center justify-between">
-                        <img src="./assets/emergency.png" alt="ambulance" class="w-8 h-8 mb-4">
-                        <i class="fa-regular fa-heart"></i>
+                        <img src="./assets/emergency.png" alt="ambulance" class="w-6 h-6 mb-4">
+                        <i id="life" class="fa-regular fa-heart"></i>
                     </div>
-                    <h1 class="text-[17px] font-bold  mx-w-full">National Emergency Number</h1>
-                    <p class="text-sm"> free serves</p>
-                    <h1 class="text-lg font-bold mt-4">999</h1>
-                    <span class="text-sm bg-gray-200 rounded-full px-3 py-1">All</span>
+                    <h1 class="text-[17px] font-bold  mx-w-full">Women & Child Helpline</h1>
+                    <p class="text-sm">Women & Child Helpline</p>
+                    <h1 class="text-lg font-bold mt-4">109</h1>
+                    <span class="text-sm bg-gray-200 rounded-full px-3 py-1">Help</span>
                     <div class="gap-3 mt-4">
                         <button class="border border-indigo-600 px-6 py-1 rounded-md"><i class="fa-regular fa-copy"></i> <span>Copy</span></button>
 
@@ -134,13 +134,13 @@
 
                  <div class="bg-white rounded-lg shadow-md p-4  ">
                     <div class="flex items-center justify-between">
-                        <img src="./assets/emergency.png" alt="ambulance" class="w-8 h-8 mb-4">
-                        <i class="fa-regular fa-heart"></i>
+                        <img src="./assets/emergency.png" alt="ambulance" class="w-6 h-6 mb-4">
+                        <i id="life" class="fa-regular fa-heart"></i>
                     </div>
-                    <h1 class="text-[17px] font-bold  mx-w-full">National Emergency Number</h1>
-                    <p class="text-sm"> free serves</p>
-                    <h1 class="text-lg font-bold mt-4">999</h1>
-                    <span class="text-sm bg-gray-200 rounded-full px-3 py-1">All</span>
+                    <h1 class="text-[17px] font-bold  mx-w-full">Anti-Corruption Helpline</h1>
+                    <p class="text-sm"> Anti-Corruption</p>
+                    <h1 class="text-lg font-bold mt-4">106</h1>
+                    <span class="text-sm bg-gray-200 rounded-full px-3 py-1">Govt.</span>
                     <div class="gap-3 mt-4">
                         <button class="border border-indigo-600 px-6 py-1 rounded-md"><i class="fa-regular fa-copy"></i> <span>Copy</span></button>
 
@@ -150,25 +150,23 @@
                     
                 </div>
 
-
-
-
-              
                 
             </div>
 
-            rom
-
         </section>
-        <aside id="Service-Details-box" class="bg-green-200 col-span-3">
+        <aside id="Service-Details-box" class=" col-span-3 bg-white rounded-lg shadow-md p-4 ">
 
-            <div>
+            <div class="flex items-center justify-between mb-6">
+                <div>
+                     <i class="fa-regular fa-clock"><span class="text-sm font-bold ml-1">Call History</span></i>
+                </div>
+                   <button class="border border-indigo-600 px-6 py-1 rounded-2xl bg-green-500 text-white">Clear</button>
 
             </div>
 
         </aside>
     </section>
-
+    <script src="project.js"></script>
     
 </body>
 </html>
