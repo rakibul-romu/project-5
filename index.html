@@ -36,17 +36,17 @@
 
 
 
-    <main class="bg-gradient-to-r from-green-900 via-green-400 to-green-900 ">
+    <section class="bg-gradient-to-r from-green-900 via-green-400 to-green-900 ">
         <img src="./assets/logo-dark.png" alt="logo" class="w-20 h-20 md:w-28 md:h-28 p-5 mx-auto ">
         <h1 class="text-2xl md:text-4xl text-white text-center  ">Emergency Service Directory</h1>
         <p class="text-xs md:text-sm text-white text-center pb-5 pt-3">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
-    </main>
+    </section>
 
 
 
-    <section id="Service-Container" class="w-full md:w-11/12 mx-auto py-6 md:py-10 grid grid-cols-1 md:grid-cols-12 gap-4 ">
+    <main id="Service-Container" class="w-full  md:w-11/12 mx-auto py-6 md:py-10 grid grid-cols-1 md:grid-cols-12 gap-4 ">
         <section id="Service-box" class=" col-span-9">
-            <div class="grid grid-cols-12 sm:grid-cols-2  md:grid-cols-3 gap-4 md:gap-6" >
+            <div class="grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 gap-4 md:gap-6" >
                 <div class="bg-white rounded-lg shadow-md p-4  ">
                     <div class="flex items-center justify-between">
                         <img src="./assets/emergency.png" alt="ambulance" class="w-6 h-6 mb-4">
@@ -197,7 +197,7 @@
             </div>
 
         </section>
-        <aside id="Service-Details-box" class="col-span-12 md:col-span-3 bg-white rounded-lg shadow-md p-3 md:p-4 mt-4 md:mt-0 w-full md:w-auto">
+        <aside id="Service-Details-box" class="col-span-10 md:col-span-3 bg-white rounded-lg shadow-md p-3 md:p-4 mt-4 md:mt-0 w-full md:w-auto">
 
             <div class="flex items-center justify-between mb-4 md:mb-6">
                 <div>
@@ -211,16 +211,16 @@
 
             <template id="call-history-item">
                 <li class="flex items-center justify-between gap-4 rounded-xl border p-3 bg-white shadow-sm">
-                <div class="leading-tight">
-                    <p class="font-medium text-slate-800 service-name">Service Name</p>
-                    <p class="text-sm text-slate-500 service-number">999</p>
-                </div>
-            <time class="text-sm text-slate-500 whitespace-nowrap call-time">00:00</time>
-  </li>
-</template>
+                    <div class="leading-tight">
+                        <p class="font-medium text-slate-800 service-name">Service Name</p>
+                        <p class="text-sm text-slate-500 service-number">999</p>
+                    </div>
+                    <time class="text-sm text-slate-500 whitespace-nowrap call-time">00:00</time>
+                </li>
+            </template>
 
         </aside>
-    </section>
+    </main>
     <script src="project.js"></script>
     
 </body>
