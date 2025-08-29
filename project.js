@@ -11,3 +11,51 @@ for (let i = 0; i < lifeIcons.length; i++) {
 }
 
 
+
+
+const coinElement = document.getElementById('coin');
+let coins = parseInt(coinElement.textContent);
+
+const callButtons = document.querySelectorAll('.call-btn');
+const callHistory = document.getElementById('call-history');
+
+for (const btn of callButtons) {
+    btn.addEventListener('click', function() {
+        const service = btn.getAttribute('data-service');
+        const number = btn.getAttribute('data-number');
+        if (coins < 20) {
+            alert('Not enough coins to make a call!');
+            return;
+        }
+        coins -= 20;
+        coinElement.textContent = coins;
+        alert(`Calling ${service} (${number})`);
+
+        const now = new Date();
+        const timeString = now.toLocaleTimeString();
+
+        const li = document.createElement('li');
+        li.textContent = `${service} - ${number}(${timeString})`;
+        callHistory.appendChild(li);
+    });
+}
+document.getElementById('clear-history').addEventListener('click', function() {
+    callHistory.innerHTML = '';
+});
+
+
+const copyButtons = document.querySelectorAll('#copy-btn');
+const copyCountElement = document.getElementById('copy-count');
+let copyCount = 0;
+
+for (const btn of copyButtons) {
+    btn.addEventListener('click', function() {
+        const number = btn.getAttribute('data-number');
+        navigator.clipboard.writeText(number)
+            .then(function() {
+                alert('Hotline number copied: ' + number);
+                copyCount++;
+                copyCountElement.textContent = copyCount;
+            });
+    });
+}
