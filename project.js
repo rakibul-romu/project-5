@@ -13,32 +13,45 @@ for (let i = 0; i < lifeIcons.length; i++) {
 
 
 
+
 const coinElement = document.getElementById('coin');
 let coins = parseInt(coinElement.textContent);
 
 const callButtons = document.querySelectorAll('.call-btn');
+
 const callHistory = document.getElementById('call-history');
 
+const template = document.getElementById('call-history-item');
+
 for (const btn of callButtons) {
-    btn.addEventListener('click', function() {
-        const service = btn.getAttribute('data-service');
-        const number = btn.getAttribute('data-number');
-        if (coins < 20) {
-            alert('Not enough coins to make a call!');
-            return;
-        }
-        coins -= 20;
-        coinElement.textContent = coins;
-        alert(`Calling ${service} (${number})`);
+  btn.addEventListener('click', function() {
+    const service = btn.getAttribute('data-service');
+    const number = btn.getAttribute('data-number');
 
-        const now = new Date();
-        const timeString = now.toLocaleTimeString();
+    if (coins < 20) {
+      alert('Not enough coins to make a call!');
+      return;
+    }
+    coins -= 20;
+    coinElement.textContent = coins;
+    alert(`Calling ${service} (${number})`);
 
-        const li = document.createElement('li');
-        li.textContent = `${service} - ${number}(${timeString})`;
-        callHistory.appendChild(li);
-    });
+    const now = new Date();
+    const timeString = now.toLocaleTimeString();
+
+    const clone = template.content.cloneNode(true);
+    clone.querySelector('.service-name').textContent = service;
+    clone.querySelector('.service-number').textContent = ` ${number}`;
+    clone.querySelector('.call-time').textContent = timeString;
+
+    callHistory.appendChild(clone);
+  });
 }
+
+
+
+
+
 document.getElementById('clear-history').addEventListener('click', function() {
     callHistory.innerHTML = '';
 });
